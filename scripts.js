@@ -225,9 +225,6 @@ async function loadNewsletters() {
 
     // 카테고리 타일
     renderCategoryTiles("#category-tiles", data);
-
-    // 모달 태그 버튼
-    buildTagButtons(".container-tag", data);
   } catch (err) {
     console.error("JSON 로드 실패:", err);
     const el = document.querySelector("#latest-list");
@@ -278,29 +275,27 @@ function renderCards(containerSelector, items) {
     .map(
       (item) => `
       <div class="col-12 col-sm-6 col-md-4">
-        <div class="card h-100 shadow-sm hover-card" onclick="open_link('${
-          item.subscribe_url
+        <div class="card h-100 shadow-sm hover-card" onclick="open_link('${item.subscribe_url
         }')">
           <img src="${item.image_url}" class="card-img-top" alt="${escapeHtml(
-        item.title
-      )}">
+          item.title
+        )}">
           <div class="card-body d-flex flex-column">
             <h6 class="publisher text-muted mb-2">${escapeHtml(
-              item.publisher
-            )}</h6>
+          item.publisher
+        )}</h6>
             <h5 class="card-title mb-2 text-truncate">${escapeHtml(
-              item.title
-            )}</h5>
+          item.title
+        )}</h5>
             <p class="card-text text-truncate-2 mb-3">${escapeHtml(
-              item.body
-            )}</p>
+          item.body
+        )}</p>
             <div class="mt-auto d-flex justify-content-between align-items-center">
               <span class="badge rounded-pill bg-secondary">${escapeHtml(
-                item.category
-              )}</span>
-              <a class="stretched-link" href="${
-                item.subscribe_url
-              }" target="_blank" rel="noopener"></a>
+          item.category
+        )}</span>
+              <a class="stretched-link" href="${item.subscribe_url
+        }" target="_blank" rel="noopener"></a>
             </div>
           </div>
         </div>
@@ -316,33 +311,30 @@ function renderHorizontalCards(containerSelector, items) {
     .map(
       (item) => `
       <div class="col-12">
-        <div class="card card-horizontal shadow-sm hover-card" onclick="open_link('${
-          item.subscribe_url
+        <div class="card card-horizontal shadow-sm hover-card" onclick="open_link('${item.subscribe_url
         }')">
           <div class="row g-0">
             <div class="col-12 col-md-4">
-              <img src="${
-                item.image_url
-              }" class="img-fluid rounded-start w-100" alt="${escapeHtml(
-        item.title
-      )}">
+              <img src="${item.image_url
+        }" class="img-fluid rounded-start w-100" alt="${escapeHtml(
+          item.title
+        )}">
             </div>
             <div class="col-12 col-md-8">
               <div class="card-body d-flex flex-column h-100">
                 <h6 class="publisher text-muted mb-2">${escapeHtml(
-                  item.publisher
-                )}</h6>
+          item.publisher
+        )}</h6>
                 <h5 class="card-title mb-2">${escapeHtml(item.title)}</h5>
                 <p class="card-text text-truncate-3 mb-3">${escapeHtml(
-                  item.body
-                )}</p>
+          item.body
+        )}</p>
                 <div class="mt-auto d-flex justify-content-between align-items-center">
                   <span class="badge rounded-pill bg-secondary">${escapeHtml(
-                    item.category
-                  )}</span>
-                  <a class="stretched-link" href="${
-                    item.subscribe_url
-                  }" target="_blank" rel="noopener"></a>
+          item.category
+        )}</span>
+                  <a class="stretched-link" href="${item.subscribe_url
+        }" target="_blank" rel="noopener"></a>
                 </div>
               </div>
             </div>
@@ -369,20 +361,6 @@ function renderCategoryTiles(containerSelector, items) {
         </div>
       </div>`;
     })
-    .join("");
-}
-
-function buildTagButtons(containerSelector, items) {
-  const container = document.querySelector(containerSelector);
-  if (!container) return;
-  const categories = [...new Set(items.map((i) => i.category))];
-  container.innerHTML = categories
-    .map(
-      (cat, idx) => `
-      <button type="button" onclick="addBadge(${idx})" class="btn btn-outline-primary me-2 mb-2">
-        ${escapeHtml(cat)}
-      </button>`
-    )
     .join("");
 }
 

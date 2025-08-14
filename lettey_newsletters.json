@@ -1,5 +1,13 @@
 [
   {
+    "publisher": "요즘IT",
+    "title": "무엇이 개발자를 열심히 일하게 하나요?",
+    "body": "최근 저희 팀에 즐거운 소식이 있었습니다. 비즈니스를 지원하고자 제안한 기술 솔루션이 다양한 이해관계자의 검토와 승인을 받아 마침내 개발에 착수하게 된 것입니다.",
+    "image_url": "https://www.wishket.com/media/news/3275/image3.png",
+    "category": "IT",
+    "subscribe_url": "https://yozm.wishket.com/"
+  },
+  {
     "publisher": "ETF네버슬립",
     "title": "다시 뜨거워진 IPO 시장, ETF로 스마트하게 투자해요",
     "body": "지난주 서학개미들의 선택은 단연 반도체였습니다. 순매수 1위 종목에 반도체 지수의 하루 등락률을 3배로 추종하는 레버리지 ETF, 'SOXL'이 등극했을 정도죠.",
@@ -62,14 +70,6 @@
     "image_url": "https://newneek.imgix.net/images/2025/08/03/1754205980_GAWCO7NXnrqJytQOi4BzGUSN22ZphJvUnorWT9kw.png?fm=pjpg&w=800",
     "category": "채용/커리어",
     "subscribe_url": "https://page.stibee.com/subscriptions/370421"
-  },
-  {
-    "publisher": "요즘IT",
-    "title": "무엇이 개발자를 열심히 일하게 하나요?",
-    "body": "최근 저희 팀에 즐거운 소식이 있었습니다. 비즈니스를 지원하고자 제안한 기술 솔루션이 다양한 이해관계자의 검토와 승인을 받아 마침내 개발에 착수하게 된 것입니다.",
-    "image_url": "https://www.wishket.com/media/news/3275/image3.png",
-    "category": "IT",
-    "subscribe_url": "https://yozm.wishket.com/"
   },
   {
     "publisher": "뭐지 뉴스레터",
